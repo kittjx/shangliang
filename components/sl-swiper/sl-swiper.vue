@@ -20,12 +20,12 @@
 
 <script setup>
 
-const images = [
-  '/static/pic/banner1.jpg',
-  '/static/pic/banner2.jpg',
-  '/static/pic/banner3.jpg',
-  '/static/pic/banner4.jpg'
-];
+defineProps({
+  images: {
+    type: Array,
+    required: true
+  }
+});
 
 </script>
 
@@ -33,7 +33,7 @@ const images = [
   
 .swiper-container {
   width: 100%;
-  height: 200px;
+  height: 350upx;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,13 +49,13 @@ const images = [
   height: 100%;
   background-color: #f0f0f0;
   color: #333;
-  font-size: 24px;
-  border-radius: 10px;
+  font-size: 24upx;
+  border-radius: 10upx;
 }
 
 .uni-swiper-dot {
-  width: 8px;
-  height: 8px;
+  width: 8upx;
+  height: 8upx;
   background-color: #999;
   border-radius: 50%;
   transition: background-color 0.3s;
