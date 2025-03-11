@@ -1,6 +1,7 @@
 <template>
   <view class="commodity-list">
-    <text>111</text>
+    <sl_commodity></sl_commodity>
+    <sl_commodity></sl_commodity>
   </view>
 </template>
 
