@@ -1,6 +1,8 @@
 <template>
   <view>
-    <sl-swiper :images="imageList"></sl-swiper>
+    <sl_swiper :images="imageList"></sl_swiper>
+    <sl_showcase title="热销爆品"></sl_showcase>
+    <sl_showcase title="为您推荐"></sl_showcase>
   </view>
 </template>
 
