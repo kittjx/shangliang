@@ -6,7 +6,7 @@
       <view>-</view>
     </view>
     <view class="commodity-container">
-      <sl_commoditylist></sl_commoditylist>
+      <sl_commoditylist :commodities="commodities"></sl_commoditylist>
     </view>
   </view>
 </template>
@@ -16,6 +16,10 @@
 defineProps({
   title: {
     type: String,
+    required: true
+  },
+  commodities: {
+    type: Array,
     required: true
   }
 });

@@ -1,20 +1,24 @@
 <template>
   <view class="commoditylist">
     
-    <view class="commodity-item" v-for="(item, index) in 5" :key="index">
-      <image class="commodity-pic" src="/static/pic/commodity1.jpg" mode="aspectFill"></image>
-      <text class="commodity-text">商品1,爆款,快来买啊,必须买,晚了就没有里,买买买买买买买买买买买买买买买买买买买买买买买买</text>
+    <view class="commodity-item" v-for="(item, index) in commodities" :key="index">
+      <image class="commodity-pic" :src="item.pic" mode="aspectFill"></image>
+      <text class="commodity-text">{{item.text}}</text>
       <view>
-        <text class="curpri">$199</text>
-        <text class="oldpri">$599</text>
+        <text class="curpri">{{item.curpri}}</text>
+        <text class="oldpri">{{item.oldpri}}</text>
       </view>
-      <text class="discount">2.8折</text>
+      <text class="discount">{{item.discount}}</text>
     </view>
     
   </view>
 </template>
 
 <script setup>
+
+const props = defineProps({
+  commodities: Array,
+});
 
 </script>
 
@@ -47,6 +51,8 @@
   -webkit-line-clamp: 2; /* 限制显示两行 */
   overflow: hidden; /* 超出部分隐藏 */
   text-overflow: ellipsis; /* 超出部分显示省略号 */
+  line-height: 1.5; /* 设置行高 */
+  height: calc(2 * 1.5em); /* 固定高度为两行的高度 */
 }
 
 .curpri {
