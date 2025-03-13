@@ -6,7 +6,7 @@
       <view>-</view>
     </view>
     <view class="commodity-container">
-	  <sl_commoditylist class="commodity-list"></sl_commoditylist>
+      <sl_commoditylist></sl_commoditylist>
     </view>
   </view>
 </template>
@@ -25,23 +25,22 @@ defineProps({
 <style lang="scss" scoped>
 
 .window {
-  padding: 20upx 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  padding: 10upx;
-  
-  .title-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  }
-  
-  .window-title {
-    padding: 0 20upx;
-    font-size: 32upx;
-  }
 }
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.window-title {
+  font-size: 32upx;
+  font-weight: bold;
+}
+
 </style>
