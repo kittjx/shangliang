@@ -1,6 +1,6 @@
 <template>
   <view class="commodity-item">
-      <image class="commodity-pic" :src="commodity.pic" mode="aspectFill"></image>
+      <image class="commodity-pic" :src="commodity.pic" mode="widthFix"></image>
       <text class="commodity-text">{{ commodity.text }}</text>
       <view class="price-container">
         <text class="curpri">¥{{ commodity.curpri }}</text>
@@ -29,7 +29,7 @@ const props = defineProps({
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10upx; /* 可添加适当间距 */
+  padding: 1upx; /* 可添加适当间距 */
 
   .commodity-pic {
     width: 100%;
